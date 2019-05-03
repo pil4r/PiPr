@@ -78,6 +78,7 @@
                 <outlet property="lblDescription" destination="NSv-XK-0Jm" id="vx2-sh-VzI"/>
                 <outlet property="lblSubtitle" destination="ZXP-B8-GR9" id="24c-dU-MqI"/>
                 <outlet property="lblTitle" destination="wbP-kK-vsY" id="0ky-8g-2zh"/>
+                <outlet property="subtitleToDescriptionConstraint" destination="B7R-Dn-OSe" id="iR4-Bn-qZV"/>
             </connections>
             <point key="canvasLocation" x="137.59999999999999" y="174.96251874062969"/>
         </tableViewCell>

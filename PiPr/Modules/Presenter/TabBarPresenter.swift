@@ -15,13 +15,13 @@ protocol TabBarViewProtocol: NSObjectProtocol {
 class TabBarPresenter: NSObject {
     
     private let resumeService: ResumeService!
-    weak fileprivate var tabBarView : TabBarController?
+    weak fileprivate var tabBarView : TabBarViewProtocol?
     
     init(resumeService: ResumeService){
         self.resumeService = resumeService
     }
     
-    func attachView(_ view:TabBarController){
+    func attachView(_ view:TabBarViewProtocol){
         tabBarView = view
     }
     
@@ -32,7 +32,8 @@ class TabBarPresenter: NSObject {
     func getInformation(){
         resumeService.getResume(informationRetrieved: {
             [weak self] resume in
-            self?.tabBarView?.setInformation(resume ?? nil)
+            guard let `self` = self else { return }
+            self.tabBarView?.setInformation(resume ?? nil)
         })
     }
     

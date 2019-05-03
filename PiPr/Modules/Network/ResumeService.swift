@@ -10,10 +10,11 @@ import UIKit
 
 class ResumeService: NSObject {
     
-    func getResume(informationRetrieved: @escaping (_ resume: Resume?) -> ()) {
-        DispatchQueue.main.async {
-            guard let url = URL(string: "https://gist.githubusercontent.com/pil4r/00b3c8afd95e30915574c430ba989337/raw/5e5a5ddab5cafb4bfb041d5ed4556db7fd06ae87/cvTest.json") else {fatalError()}
-            
+    private let urlString = "https://gist.githubusercontent.com/pil4r/00b3c8afd95e30915574c430ba989337/raw/350c0d19ade6f726419058e06027051553d8fc31/cvTest.json"
+    
+    func getResume(informationRetrieved: @escaping (_ resume: Resume?) -> Void) {
+        DispatchQueue.global(qos: .background).async {
+            guard let url = URL(string: self.urlString) else {fatalError()}
             let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
                 guard let data = data else { return }
                 print(String(data: data, encoding: .utf8)!)

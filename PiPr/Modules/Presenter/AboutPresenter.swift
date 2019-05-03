@@ -8,15 +8,16 @@
 
 import UIKit
 
-protocol AboutProtocol: NSObjectProtocol {
-
+protocol AboutViewProtocol: NSObjectProtocol {
+    func getPersonalInformation() -> PersonalInformation?
+    func updateView (personalInformation: PersonalInformation)
 }
 
 class AboutPresenter: NSObject {
     
-    weak fileprivate var aboutView : AboutViewController?
+    weak fileprivate var aboutView : AboutViewProtocol?
     
-    func attachView(_ view:AboutViewController){
+    func attachView(_ view:AboutViewProtocol){
         aboutView = view
     }
     
@@ -26,41 +27,24 @@ class AboutPresenter: NSObject {
     
     func updateInformation() {
         
-        guard let tbController = self.aboutView?.tabBarController  as? TabBarController else {
-            fatalError()
+        guard let information = aboutView?.getPersonalInformation() else {
+            return
         }
-        if let personalInfo = tbController.resumeInformation?.cv?.personalInformation {
-            self.aboutView?.personalInformation = personalInfo
-        }
-        
-        DispatchQueue.main.async{
-            self.aboutView?.tableView.reloadData()
-            self.aboutView?.tableViewHeight.constant = (self.aboutView?.tableView.contentSize.height ?? 0.0) + 100.0
-        }
+        aboutView?.updateView(personalInformation: information)
         
     }
     
     func getNumberOfRows() -> Int{
         
-        if let array = aboutView?.personalInformation?.aditionalInformation {
+        if let array = aboutView?.getPersonalInformation()?.aditionalInformation {
             return array.count
         }
         return 0
     }
     
-    func getPersonalInformation() -> PersonalInformation?{
-        guard let tbController = aboutView?.tabBarController  as? TabBarController else {
-            return nil
-        }
-        if let personalInfo = tbController.resumeInformation?.cv?.personalInformation {
-            return personalInfo
-        }
-        return nil
-    }
-    
     func getInfoForRow(index: Int) -> AditionalInformation? {
 
-        guard let info = aboutView?.personalInformation?.aditionalInformation, info.count > index else {
+        guard let info = aboutView?.getPersonalInformation()?.aditionalInformation, info.count > index else {
             return nil
         }
         return info[index]

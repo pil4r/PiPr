@@ -14,6 +14,8 @@ struct Period : Codable {
 		case endDate = "end_date"
 		case startDate = "start_date"
 	}
+    
+    
 
 
 }

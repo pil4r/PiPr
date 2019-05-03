@@ -8,11 +8,16 @@
 
 import UIKit
 
+protocol EducationViewProtocol: NSObjectProtocol {
+    func getEducationInformation() -> [Education]?
+    func updateEducationView(education: [Education])
+}
+
 class EducationPresenter: NSObject {
     
-    weak fileprivate var educationView : EducationViewController?
+    weak fileprivate var educationView : EducationViewProtocol?
     
-    func attachView(_ view:EducationViewController){
+    func attachView(_ view:EducationViewProtocol){
         educationView = view
     }
     
@@ -20,27 +25,19 @@ class EducationPresenter: NSObject {
         educationView = nil
     }
     
-    func registerCell() {
-        educationView?.tableView.register(UINib.init(nibName: "InformationViewCell", bundle: nil), forCellReuseIdentifier: "informationCell")
-    }
-    
-    func getInformation() {
-        
-        guard let tbController = self.educationView?.tabBarController  as? TabBarController else {
-            fatalError()
+    func updateEducationInformation() {
+        guard let information = educationView?.getEducationInformation() else {
+            return
         }
-        if let educationHistory = tbController.resumeInformation?.cv?.education {
-            self.educationView?.educationHistory = educationHistory
-        }
-        
-        DispatchQueue.main.async{
-            //self.experienceView?.tableView.reloadData()
-        }
-        
+        educationView?.updateEducationView(education: information)
     }
     
     func getNumberOfRows() -> Int{
-        return educationView?.educationHistory.count ?? 0
+        
+        if let array = educationView?.getEducationInformation() {
+            return array.count
+        }
+        return 0
     }
 
 }

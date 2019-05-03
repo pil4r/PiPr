@@ -14,16 +14,14 @@ class InformationViewCell: UITableViewCell {
     @IBOutlet weak var lblSubtitle: UILabel!
     @IBOutlet weak var lblDescription: UILabel!
     @IBOutlet weak var lblDate: UILabel!
+    @IBOutlet weak var subtitleToDescriptionConstraint: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }

@@ -18,6 +18,9 @@ class TabBarController: UITabBarController {
         tabPresenter.attachView(self)
         tabPresenter.getInformation()
     }
+}
+
+extension TabBarController: TabBarViewProtocol {
     
     func setInformation(_ resume: Resume?) {
         resumeInformation = resume

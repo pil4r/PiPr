@@ -8,11 +8,16 @@
 
 import UIKit
 
+protocol ExperienceViewProtocol: NSObjectProtocol {
+    func getExperienceInformation() -> [CareerHistory]?
+    func updateExperienceView(careerHistory: [CareerHistory])
+}
+
 class ExperiencePresenter: NSObject {
     
-    weak fileprivate var experienceView : ExperienceViewController?
+    weak fileprivate var experienceView : ExperienceViewProtocol?
     
-    func attachView(_ view:ExperienceViewController){
+    func attachView(_ view:ExperienceViewProtocol){
         experienceView = view
     }
     
@@ -20,31 +25,23 @@ class ExperiencePresenter: NSObject {
         experienceView = nil
     }
     
-    func registerCell() {
-        experienceView?.tableView.register(UINib.init(nibName: "InformationViewCell", bundle: nil), forCellReuseIdentifier: "informationCell")
-    }
-    
     func showExperience() {
         
     }
     
-    func getInformation() {
-        
-        guard let tbController = self.experienceView?.tabBarController  as? TabBarController else {
-            fatalError()
+    func updateExperienceInformation() {
+        guard let information = experienceView?.getExperienceInformation() else {
+            return
         }
-        if let careerHistory = tbController.resumeInformation?.cv?.careerHistory {
-            self.experienceView?.careerHistory = careerHistory
-        }
-        
-        DispatchQueue.main.async{
-            //self.experienceView?.tableView.reloadData()
-        }
-        
+        experienceView?.updateExperienceView(careerHistory: information)
     }
     
     func getNumberOfRows() -> Int{
-        return experienceView?.careerHistory.count ?? 0
+        
+        if let array = experienceView?.getExperienceInformation() {
+            return array.count
+        }
+        return 0
     }
 
 }

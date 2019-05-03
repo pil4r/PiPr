@@ -10,7 +10,6 @@
 		390F58C02278EC3900F63A95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390F58BF2278EC3900F63A95 /* AppDelegate.swift */; };
 		390F58C52278EC3900F63A95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 390F58C32278EC3900F63A95 /* Main.storyboard */; };
 		390F58CA2278EC3B00F63A95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 390F58C82278EC3B00F63A95 /* LaunchScreen.storyboard */; };
-		390F58D52278EC3B00F63A95 /* PiPrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390F58D42278EC3B00F63A95 /* PiPrTests.swift */; };
 		390F58E02278EC3B00F63A95 /* PiPrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390F58DF2278EC3B00F63A95 /* PiPrUITests.swift */; };
 		390F58F4227A5C7700F63A95 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390F58F3227A5C7700F63A95 /* AboutViewController.swift */; };
 		390F58F6227A5C8400F63A95 /* EducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390F58F5227A5C8400F63A95 /* EducationViewController.swift */; };
@@ -18,7 +17,6 @@
 		390F58FC227A5D4700F63A95 /* AboutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390F58FB227A5D4700F63A95 /* AboutPresenter.swift */; };
 		390F58FE227A5D5700F63A95 /* EducationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390F58FD227A5D5700F63A95 /* EducationPresenter.swift */; };
 		390F5902227A5D7A00F63A95 /* ExperiencePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390F5901227A5D7A00F63A95 /* ExperiencePresenter.swift */; };
-		390F5905227A6EC100F63A95 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390F5904227A6EC100F63A95 /* GradientView.swift */; };
 		390F5909227A885900F63A95 /* DataViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 390F5908227A885900F63A95 /* DataViewCell.xib */; };
 		390F590B227A8E5100F63A95 /* DataViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390F590A227A8E5100F63A95 /* DataViewCell.swift */; };
 		390F5913227B4A6100F63A95 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390F5912227B4A6100F63A95 /* TabBarController.swift */; };
@@ -34,10 +32,11 @@
 		390F593F227B56CB00F63A95 /* Cv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390F5935227B56CB00F63A95 /* Cv.swift */; };
 		390F5940227B56CB00F63A95 /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390F5936227B56CB00F63A95 /* Period.swift */; };
 		390F5943227B5D8500F63A95 /* NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390F5942227B5D8500F63A95 /* NotificationExtension.swift */; };
-		390F5945227B82D200F63A95 /* CollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390F5944227B82D200F63A95 /* CollectionExtension.swift */; };
 		390F594A227B882D00F63A95 /* InformationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390F5948227B882D00F63A95 /* InformationViewCell.swift */; };
 		390F594B227B882D00F63A95 /* InformationViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 390F5949227B882D00F63A95 /* InformationViewCell.xib */; };
 		390F594D227BA91400F63A95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 390F594C227BA91400F63A95 /* Assets.xcassets */; };
+		394D2CB3227C9BAB00E42F80 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394D2CB2227C9BAB00E42F80 /* Constants.swift */; };
+		398F51FD227CBB1E005D00C2 /* TabControlerPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398F51FC227CBB1E005D00C2 /* TabControlerPresenterTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +63,6 @@
 		390F58C92278EC3B00F63A95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		390F58CB2278EC3B00F63A95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		390F58D02278EC3B00F63A95 /* PiPrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PiPrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		390F58D42278EC3B00F63A95 /* PiPrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiPrTests.swift; sourceTree = "<group>"; };
 		390F58D62278EC3B00F63A95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		390F58DB2278EC3B00F63A95 /* PiPrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PiPrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		390F58DF2278EC3B00F63A95 /* PiPrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiPrUITests.swift; sourceTree = "<group>"; };
@@ -75,7 +73,6 @@
 		390F58FB227A5D4700F63A95 /* AboutPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPresenter.swift; sourceTree = "<group>"; };
 		390F58FD227A5D5700F63A95 /* EducationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationPresenter.swift; sourceTree = "<group>"; };
 		390F5901227A5D7A00F63A95 /* ExperiencePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperiencePresenter.swift; sourceTree = "<group>"; };
-		390F5904227A6EC100F63A95 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		390F5908227A885900F63A95 /* DataViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataViewCell.xib; sourceTree = "<group>"; };
 		390F590A227A8E5100F63A95 /* DataViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewCell.swift; sourceTree = "<group>"; };
 		390F5912227B4A6100F63A95 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -91,10 +88,11 @@
 		390F5935227B56CB00F63A95 /* Cv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cv.swift; sourceTree = "<group>"; };
 		390F5936227B56CB00F63A95 /* Period.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
 		390F5942227B5D8500F63A95 /* NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtension.swift; sourceTree = "<group>"; };
-		390F5944227B82D200F63A95 /* CollectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtension.swift; sourceTree = "<group>"; };
 		390F5948227B882D00F63A95 /* InformationViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewCell.swift; sourceTree = "<group>"; };
 		390F5949227B882D00F63A95 /* InformationViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationViewCell.xib; sourceTree = "<group>"; };
 		390F594C227BA91400F63A95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		394D2CB2227C9BAB00E42F80 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		398F51FC227CBB1E005D00C2 /* TabControlerPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabControlerPresenterTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,8 +153,8 @@
 		390F58D32278EC3B00F63A95 /* PiPrTests */ = {
 			isa = PBXGroup;
 			children = (
-				390F58D42278EC3B00F63A95 /* PiPrTests.swift */,
 				390F58D62278EC3B00F63A95 /* Info.plist */,
+				398F51FC227CBB1E005D00C2 /* TabControlerPresenterTest.swift */,
 			);
 			path = PiPrTests;
 			sourceTree = "<group>";
@@ -236,6 +234,7 @@
 				390F58C32278EC3900F63A95 /* Main.storyboard */,
 				390F58C82278EC3B00F63A95 /* LaunchScreen.storyboard */,
 				390F58CB2278EC3B00F63A95 /* Info.plist */,
+				394D2CB2227C9BAB00E42F80 /* Constants.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -243,7 +242,6 @@
 		390F5903227A6E5600F63A95 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				390F5904227A6EC100F63A95 /* GradientView.swift */,
 				390F5908227A885900F63A95 /* DataViewCell.xib */,
 				390F590A227A8E5100F63A95 /* DataViewCell.swift */,
 				390F5948227B882D00F63A95 /* InformationViewCell.swift */,
@@ -264,7 +262,6 @@
 			isa = PBXGroup;
 			children = (
 				390F5942227B5D8500F63A95 /* NotificationExtension.swift */,
-				390F5944227B82D200F63A95 /* CollectionExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -407,9 +404,7 @@
 				390F5902227A5D7A00F63A95 /* ExperiencePresenter.swift in Sources */,
 				390F5915227B4A8B00F63A95 /* TabBarPresenter.swift in Sources */,
 				390F58FC227A5D4700F63A95 /* AboutPresenter.swift in Sources */,
-				390F5945227B82D200F63A95 /* CollectionExtension.swift in Sources */,
 				390F5943227B5D8500F63A95 /* NotificationExtension.swift in Sources */,
-				390F5905227A6EC100F63A95 /* GradientView.swift in Sources */,
 				390F58FA227A5C9A00F63A95 /* ExperienceViewController.swift in Sources */,
 				390F5918227B4C6C00F63A95 /* ResumeService.swift in Sources */,
 				390F5940227B56CB00F63A95 /* Period.swift in Sources */,
@@ -426,6 +421,7 @@
 				390F5938227B56CB00F63A95 /* Language.swift in Sources */,
 				390F590B227A8E5100F63A95 /* DataViewCell.swift in Sources */,
 				390F58FE227A5D5700F63A95 /* EducationPresenter.swift in Sources */,
+				394D2CB3227C9BAB00E42F80 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +429,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				390F58D52278EC3B00F63A95 /* PiPrTests.swift in Sources */,
+				398F51FD227CBB1E005D00C2 /* TabControlerPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
